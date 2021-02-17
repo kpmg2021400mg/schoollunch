@@ -1,4 +1,4 @@
-# school lunch delivery project
+# School lunch delivery project
 
 Due to COVID-19, schools has been shut down. Because of it, school meal itself and related businesses crashed. Also, children who were service users of school meals have poor nutrition in 2020.
 
