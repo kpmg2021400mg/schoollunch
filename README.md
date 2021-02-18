@@ -5,7 +5,7 @@ Due to COVID-19, schools has been shut down. Because of it, school meal itself a
 Our team, 400mg view this problem as social problem, and tried to complement current business by using machine learning and deep learning.
 
 ### 1. CROP PRICE PREDICTION
-By using data from ```datagokR```, we want to predict an aspect of crop prices mainly from the previous time series price data and weather data. If the price can be predicted, the school meal services can buy produces cheaper. Also, we can ensure sustainable consumption and production patterns in long term.
+By using data from ```KAMIS``` and ```KMA```, we want to predict an aspect of crop prices mainly from the previous time series price data and weather data. If the price can be predicted, the school meal services can buy produces cheaper. Also, we can ensure sustainable consumption and production patterns in long term.
 
 ### 2. DISTRIBUTION COST REDUCTION
 In the case of logistic companies, using efficient and optimized route for delivery reduces transport costs. We adopted this idea to reduce transport maintenance cost. So we divide this into two steps.
