@@ -19,7 +19,7 @@ var drawInfoArr = [];
 function initTmap(){
 	// 1. 지도 띄우기
 	map = new Tmapv2.Map("map_div", {
-		center: new Tmapv2.LatLng(37.47101114710962, 126.9973611831669),
+		center: new Tmapv2.LatLng(37.50183660292797, 127.04695482671995),
 		width : "100%",
 		height : "400px",
 		zoom : 15,
@@ -92,7 +92,7 @@ function initTmap(){
 	$.ajax({
 		type:"POST",
 		headers : headers,
-		url:"https://apis.openapi.sk.com/tmap/routes/routeOptimization30?version=1&format=json",//
+		url:"https://apis.openapi.sk.com/tmap/routes/routeOptimization10?version=1&format=json",//
 		async:false,
 		contentType: "application/json",
 		data: JSON.stringify({
