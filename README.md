@@ -13,6 +13,8 @@ In the case of logistic companies, using efficient and optimized route for deliv
 #### 2-1. Dividing districts
 We divided 40 districts as the maximum operation of school cafeteria is about 1500 people. We used K-nearest-Neighbors to predict the district. We used two ways to divide the district. First, we used physical distance from the schools. Also, we used weighted K-nearest Neighbors by student population. Both districts are similar, so we decided to divide the district by population as the capacity of delivery services and workforce is important.
 
+![지도](https://user-images.githubusercontent.com/78395836/108619668-a2ffe700-7469-11eb-85c0-2e0a21612697.png)
+
 #### 2-2. Finding efficient routes
 
 
