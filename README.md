@@ -7,6 +7,10 @@ Our team, 400mg view this problem as social problem, and tried to complement cur
 ### 1. CROP PRICE PREDICTION
 By using data from ```KAMIS``` and ```KMA```, we want to predict an aspect of crop prices mainly from the previous time series price data and weather data. If the price can be predicted, the school meal services can buy produces cheaper. Also, we can ensure sustainable consumption and production patterns in long term.
 
+https://user-images.githubusercontent.com/78395836/108622950-7fe03200-747f-11eb-82ab-15e105855679.png
+
+We used crop price data, weather data, and gas prices as we referred 성호 신 and 민제 정 did their own research.
+
 ### 2. DISTRIBUTION COST REDUCTION
 In the case of logistic companies, using efficient and optimized route for delivery reduces transport costs. We adopted this idea to reduce transport maintenance cost. So we divide this into two steps.
 
@@ -17,6 +21,7 @@ We divided 40 districts as the maximum operation of school cafeteria is about 15
 
 #### 2-2. Finding efficient routes
 
+We attatched our route optimization code that used T map API.
 
 ### 3. NEW CUSTOMER TARGET
 According to the report from the Bank of Korea, the population working from home will be maintained after the pandemic situation. We expand our service to young 20s who live alone and work from home, who wants to eat fresh and balanced meals and maintain the population size for each production batch(school).
