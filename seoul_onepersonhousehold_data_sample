@@ -1,0 +1,22 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import warnings
+import math
+from matplotlib import rcParams
+import matplotlib.pyplot as plt
+import string
+from matplotlib import font_manager, rc
+import datetime
+
+rc('font', family='AppleGothic')
+plt.rcParams['axes.unicode_minus'] = False
+
+Region= pd.read_excel('/content/drive/MyDrive/Colab Notebooks/datasets/2019 Oneperson.xlsx') # 지역데이터 불러오기
+
+df=Region[['Gu','status','longitude','latitude']]
+
+fig, ax = plt.subplots(figsize=(10,10))
+df.plot.scatter(x='longitude',y='latitude',s='status',c='green', ax=ax, alpha=0.5)
+for ind in df.index:
+    ax.annotate(df.loc[ind]['Gu'], (df.loc[ind]['longitude'], df.loc[ind]['latitude']))
