@@ -1,0 +1,131 @@
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import warnings
+import math
+from matplotlib import rcParams
+import matplotlib.pyplot as plt
+import string
+from matplotlib import font_manager, rc
+import datetime
+
+rc('font', family='AppleGothic')
+plt.rcParams['axes.unicode_minus'] = False
+
+Region= pd.read_csv('/content/drive/MyDrive/Colab Notebooks/서울시 고등학교 현황1.csv', engine='python') # 지역데이터 불러오기
+
+df=Region[['name','number','longitude','latitude']] # 동, 1인 가구 예측 수, 경도, 위도 데이터만 추출
+
+fig, ax = plt.subplots(figsize=(5,5))
+df.drop(columns='number').plot.scatter(x='longitude',y='latitude',ax=ax)
+for ind in df.index:
+    ax.annotate(df.loc[ind]['name'], (df.loc[ind]['longitude'], df.loc[ind]['latitude']))
+
+# clustering
+from sklearn.cluster import KMeans
+kmeans = KMeans(n_clusters=30,random_state=2020).fit(df[['longitude','latitude']])
+labels=kmeans.labels_
+centers=kmeans.cluster_centers_
+
+df['clustering']=labels
+df.head(20)
+
+ig, ax = plt.subplots(figsize=(10,10))
+
+df_temp=df[df['clustering']==0]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Red')
+
+df_temp=df[df['clustering']==1]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Orange')
+
+df_temp=df[df['clustering']==2]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Green')
+
+df_temp=df[df['clustering']==3]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Blue')
+
+df_temp=df[df['clustering']==4]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Black')
+
+df_temp=df[df['clustering']==5]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Gray')
+
+df_temp=df[df['clustering']==6]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Purple')
+
+df_temp=df[df['clustering']==7]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Yellow')
+
+df_temp=df[df['clustering']==8]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='White')
+
+df_temp=df[df['clustering']==9]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='Maroon')
+
+df_temp=df[df['clustering']==10]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='saddlebrown')
+
+df_temp=df[df['clustering']==11]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='salmon')
+
+df_temp=df[df['clustering']==12]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='sandybrown')
+
+df_temp=df[df['clustering']==13]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='tan')
+
+df_temp=df[df['clustering']==14]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='darkgoldenrod')
+
+df_temp=df[df['clustering']==15]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='olive')
+
+df_temp=df[df['clustering']==16]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='lawngreen')
+
+df_temp=df[df['clustering']==17]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='teal')
+
+df_temp=df[df['clustering']==18]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='steelblue')
+
+df_temp=df[df['clustering']==19]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='aqua')
+
+df_temp=df[df['clustering']==20]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='darkblue')
+
+df_temp=df[df['clustering']==21]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='slateblue')
+
+df_temp=df[df['clustering']==22]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='indigo')
+
+df_temp=df[df['clustering']==23]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='pink')
+
+df_temp=df[df['clustering']==24]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='slategray')
+
+df_temp=df[df['clustering']==25]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='floralwhite')
+
+df_temp=df[df['clustering']==26]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='chocolate')
+
+df_temp=df[df['clustering']==27]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='darkgoldenrod')
+
+df_temp=df[df['clustering']==28]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='darkolivegreen')
+
+df_temp=df[df['clustering']==29]
+df_temp.plot.scatter(x='longitude',y='latitude',ax=ax,color='steelblue')
+
+
+for ind in df.index:
+    ax.annotate(df.loc[ind]['number'], (df.loc[ind]['longitude'], df.loc[ind]['latitude']))
