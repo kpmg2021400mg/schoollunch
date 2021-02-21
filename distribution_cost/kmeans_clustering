@@ -16,7 +16,7 @@ import datetime
 rc('font', family='AppleGothic')
 plt.rcParams['axes.unicode_minus'] = False
 
-Region= pd.read_csv('/content/drive/MyDrive/Colab Notebooks/서울시 고등학교 현황1.csv', engine='python') # 지역데이터 불러오기
+Region= pd.read_csv('/content/drive/MyDrive/Colab Notebooks/서울시 초중고 위치.csv', engine='python') # 지역데이터 불러오기
 
 df=Region[['name','number','longitude','latitude']] # 동, 1인 가구 예측 수, 경도, 위도 데이터만 추출
 
